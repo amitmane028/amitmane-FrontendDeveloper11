@@ -1,7 +1,8 @@
 .header{
-    background-color:black;
-    color: white;
+   background-image: linear-gradient(to right, rgb(2, 6, 11) , rgb(203, 206, 207));
+    color: rgb(56, 9, 242);
     height: 100px;
+    width: 100%;
  
 }
 h1{
@@ -16,11 +17,15 @@ h1{
  }
  .banner img{
     width:100vw;
- height: 75vh;
+ height: 100vh;
  }
  .tagline{
     position: absolute;
     top: 5%;
-    left: 5%;
-    color: white;
+    left: 2%;
+    color: rgb(246, 206, 5);
+    font-size: large;
+ }
+ .apiData{
+   background-image: linear-gradient(to right, rgb(148, 158, 168) , rgb(18, 174, 222));
  }

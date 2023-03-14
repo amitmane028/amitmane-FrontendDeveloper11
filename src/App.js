@@ -1,5 +1,5 @@
 import "./App.css";
-import React from 'react'
+import React from "react";
 
 import Banner from "./components/Banner";
 import Header from "./components/Header";
