@@ -4,15 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.css';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-import { Pagination } from "react-bootstrap";
+import filterFactory,{textFilter} from "react-bootstrap-table2-filter";
+import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css';
+
 
 function ApiData() {
     const [data, setData] = useState([]);
     const columns = [
         { dataField: 'id', text: 'id' },
-        { dataField: 'type', text: 'type' ,sort:true},
-        { dataField: 'serial', text: 'serial',sort:true },
-        { dataField: 'status', text: 'status',sort:true },
+        { dataField: 'type', text: 'type' ,sort:true,filter:textFilter()},
+        { dataField: 'serial', text: 'serial',sort:true ,filter:textFilter() },
+        { dataField: 'status', text: 'status',sort:true  ,filter:textFilter()},
         { dataField: 'reuse_count', text: 'reuse_count',sort:true },
         { dataField: 'water_landings', text: 'water_landings',sort:true }
     
@@ -51,6 +53,7 @@ function ApiData() {
                  columns={columns} 
                  data={data} 
                  pagination={pagination}
+                 filter={filterFactory()}
                  />
                 {/* <table>
                     <tr>
